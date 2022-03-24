@@ -1,8 +1,12 @@
+const body = document.querySelector('body');
 const nav_buttons = document.querySelectorAll('.nav_element');
 const nav_icons = document.querySelectorAll('.nav_icon');
 const header = document.querySelector('.test');
 const greeting = document.querySelector('#greeting');
-const pocetnaStranica = document.querySelector('.pocetna')
+
+const pocetnaStranica = document.querySelector('.pocetna');
+const trazilicaStranica = document.querySelector('.trazilica');
+const zbirkaStranica = document.querySelector('.zbirka');
 let counter = 0;
 
 
@@ -28,6 +32,7 @@ function showGreet() {
 // })
 
 //NAVIGACIJA
+pageloadState();
 
 nav_buttons.forEach (element => {
     element.addEventListener('click', (e) => {
@@ -35,15 +40,21 @@ nav_buttons.forEach (element => {
         switch(element.id) {
             case 'nav_id_1':
                 counter = 1;
-                pocetnaStranica.style.visibility = 'visible'
+                pocetnaStranica.style.display = 'block'
+                trazilicaStranica.style.display = 'none'
+                zbirkaStranica.style.display = 'none'
                 break;
             case 'nav_id_2':
                 counter = 2;
-                pocetnaStranica.style.visibility = 'hidden'
+                pocetnaStranica.style.display = 'none'
+                trazilicaStranica.style.display = 'block'
+                zbirkaStranica.style.display = 'none'
                 break;
             case 'nav_id_3':
                 counter = 3;
-                pocetnaStranica.style.visibility = 'hidden'
+                zbirkaStranica.style.display = 'block'
+                pocetnaStranica.style.display = 'none'
+                trazilicaStranica.style.display = 'none'
                 break;
         }
         nav_icons.forEach(element => {
@@ -63,5 +74,20 @@ nav_buttons.forEach (element => {
         selectedIcon.style.transform = 'scale(1.2)'
     })
 })
+
+
+function pageloadState() {
+    pocetnaStranica.style.display = 'block'
+    trazilicaStranica.style.display = 'none'
+}
+
+function toggleState(element) {
+    if(element.style.display === 'block'){
+        element.style.display = 'none'
+    }
+    else{
+        element.style.display = 'block'
+    }
+}
 
 showGreet();

@@ -36,12 +36,12 @@ body{
 .playlist_box{
     display: flex;
     height: 40px;
-    line-height: 40px;
     margin: 5px;
     min-width: 100px;
     background-color: #2B2B2B;
     border-radius: 5px;
     z-index: 2;
+    max-width: 100%;
 }
 
 .playlist_box:active{
@@ -50,11 +50,16 @@ body{
 }
 
 .playlist_text{
-    vertical-align: middle;
+    font-size: 0.8em;
+    position: relative;
+    bottom: 10%;
+    padding-left: 7px;
+    font-weight: 500;
     /* bottom: 25%; */
 }
 
 .albums_view{
+    overflow: hidden;
     display: flex;
     min-height: 200px;
 }
@@ -84,7 +89,7 @@ body{
 #tab_nav {
     /* background-color: #1DB954; */
     background-color: #272727;
-    height: 70px;
+    height: 50px;
     width: 100%;
     position: fixed;
     bottom: 0px;
