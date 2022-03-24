@@ -1,0 +1,120 @@
+@import url(animations.css);
+@import url('http://fonts.cdnfonts.com/css/gotham');
+
+body{
+    background: rgb(18,18,18);
+    margin: auto;
+    font-family: 'Gotham', sans-serif;
+    color: white;
+}
+
+.pocetna{
+    margin: 0;
+    padding: 0;
+    background: rgb(18,18,18);
+    background: linear-gradient(330deg, rgba(18,18,18,1) 85%, rgb(37, 37, 255) 100%);
+}
+
+.container {
+    min-height: 900px;
+    margin: 7px;
+}
+
+.header {
+    color: red;
+    color: white;
+}
+
+.playlists_view{
+    margin: none;
+    min-height: 100px;
+    width: 100%;
+    display: inline-grid;
+    grid: repeat(3, auto) / auto-flow;
+}
+
+.playlist_box{
+    display: flex;
+    height: 40px;
+    line-height: 40px;
+    margin: 5px;
+    min-width: 100px;
+    background-color: #2B2B2B;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+.playlist_box:active{
+    background-color: gray;
+    opacity: 0.8;
+}
+
+.playlist_text{
+    vertical-align: middle;
+    /* bottom: 25%; */
+}
+
+.albums_view{
+    display: flex;
+    min-height: 200px;
+}
+
+.album_box{
+    display: block;
+    margin: 10px 5px;
+    width: 120px;
+    height: 170px;
+    padding: 0;
+}
+
+.album_box:active{
+    background-color: gray;
+    opacity: 0.8;
+}
+
+.box_text{
+    margin: 0 0 5px;
+}
+
+.box_para{
+    font-size: 0.7em;
+    font-weight: 500;
+}
+
+#tab_nav {
+    /* background-color: #1DB954; */
+    background-color: #272727;
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    display: inline-grid;
+    grid: repeat(1, auto) / auto-flow;
+    z-index: 50;
+}
+
+.nav_element {
+    text-align: center;
+}
+.nav_element:active{
+    /* transform: scale(1.5); */
+    background-color: gray;
+    max-height: 70px;
+}
+
+.nav_icon{
+    position: relative;
+    top: 35%;
+    color: white;
+}
+
+.playlist_image{
+    width: 50px;
+    height: 40px;
+    z-index: 1;
+}
+
+.album_image{
+    width: 100%;
+    z-index: 1;
+}
