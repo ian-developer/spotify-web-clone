@@ -1,13 +1,18 @@
-@keyframes fade_out{
-    from {
-        background-color: #121212;
-    }
-    to{
-        background-color: gray;
-    }
+@keyframes fade-in{
+    0% {visibility: hidden; opacity: 0;}
+    100% {visibility: visible; opacity: 1;}
+}
+@-webkit-keyframes fade-in{
+    0% {visibility: hidden; opacity: 0;}
+    100% {visibility: visible; opacity: 1;}
+}
+@-moz-keyframes fade-in{
+    0% {visibility: hidden; opacity: 0;}
+    100% {visibility: visible; opacity: 1;}
 }
 
-.fade_out{
-    animation-name: nav_anim;
-    animation-duration: 10s;
+.animation{
+    animation-name: fade-in;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 }

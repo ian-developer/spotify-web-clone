@@ -146,9 +146,8 @@ body{
 }
 
 #tab_nav {
-    /* background-color: #1DB954; */
     background-color: #272727;
-    height: 50px;
+    height: 40pt;
     width: 100%;
     position: fixed;
     bottom: 0px;
@@ -200,4 +199,56 @@ body{
     position: relative;
     float: left;
     width: 80pt;
+}
+
+#hamb{
+    margin: 0;
+    position: relative;
+    float: right;
+    top: -35pt;
+    right: 4pt;
+    width: 30pt;
+    height: 22pt;
+    z-index: 49;
+    transition: 0.5s;
+  }
+
+#close_menu{
+    margin: 0;
+    position: relative;
+    float: right;
+    top: -35pt;
+    right: -27pt;
+    width: 30pt;
+    height: 22pt;
+    border: 1px solid red;
+    visibility: hidden;
+}
+
+.stick{
+    height: 3px;
+    margin: 5px;
+    background: white;
+}
+
+.menu_text{
+    margin-top: 25px;
+    margin-left: 25px;
+    visibility: hidden;
+    transition: 0.7s;
+    font-weight: 400;
+}
+
+#side_menu{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 0%;
+    height: 95%;
+    scroll-behavior: unset;
+    background-color: #202020;
+    opacity: 1;
+    z-index: 3;
+    transition: 0.5s;
+    overflow: hidden;
 }

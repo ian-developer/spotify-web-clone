@@ -4,10 +4,16 @@ const nav_icons = document.querySelectorAll('.nav_icon');
 const header = document.querySelector('.test');
 const greeting = document.querySelector('#greeting');
 
+const hamburgerButton = document.querySelector("#hamb");
+const sideMenu = document.querySelector("#side_menu");
+const closeMenuButton = document.querySelector("#close_menu");
+
 const pocetnaStranica = document.querySelector('.pocetna');
 const trazilicaStranica = document.querySelector('.trazilica');
 const zbirkaStranica = document.querySelector('.zbirka');
 let counter = 0;
+
+let active = false;
 
 
 //Definira koji će pozdrav biti prikazan
@@ -25,11 +31,7 @@ function showGreet() {
       }
 }
 
-//Funkcionalnost za buttone navigacije
-// nav_buttons.addEventListener('click', (e) => {
-//     header.innerHTML = e.target.id
-//     e.target.classList.add('bubble');
-// })
+showGreet();
 
 //NAVIGACIJA
 pageloadState();
@@ -94,4 +96,22 @@ function toggleState(element) {
     }
 }
 
-showGreet();
+hamburgerButton.addEventListener('click', () => {
+
+    if(active){
+        sideMenu.style.width = "0%"
+        active = false
+        body.style.overflow = ""
+        document.querySelectorAll('.menu_text').forEach( element => {
+            element.classList.remove('animation')
+        })
+    }
+    else{
+        active = true
+        sideMenu.style.width = "100%"
+        body.style.overflow = "hidden"
+        document.querySelectorAll('.menu_text').forEach( element => {
+            element.classList.add('animation')
+        })
+    }
+  });
