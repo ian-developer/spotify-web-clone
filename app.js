@@ -14,10 +14,10 @@ let counter = 0;
 function showGreet() {
     var date = new Date
     var hours = date.getHours()
-      if (hours >= 0 && hours < 12){
+      if (hours >= 4 && hours < 12){
           greeting.innerHTML = 'Dobro jutro'
       }
-      else if(hours >= 12 && hours < 17){
+      else if(hours >= 12 && hours < 18){
           greeting.innerHTML = 'Dobar dan'
       }
       else {
@@ -40,18 +40,21 @@ nav_buttons.forEach (element => {
         switch(element.id) {
             case 'nav_id_1':
                 counter = 1;
+                window.scrollTo(0,0); 
                 pocetnaStranica.style.display = 'block'
                 trazilicaStranica.style.display = 'none'
                 zbirkaStranica.style.display = 'none'
                 break;
             case 'nav_id_2':
                 counter = 2;
+                window.scrollTo(0,0); 
                 pocetnaStranica.style.display = 'none'
                 trazilicaStranica.style.display = 'block'
                 zbirkaStranica.style.display = 'none'
                 break;
             case 'nav_id_3':
                 counter = 3;
+                window.scrollTo(0,0); 
                 zbirkaStranica.style.display = 'block'
                 pocetnaStranica.style.display = 'none'
                 trazilicaStranica.style.display = 'none'
@@ -77,8 +80,9 @@ nav_buttons.forEach (element => {
 
 
 function pageloadState() {
-    pocetnaStranica.style.display = 'block'
-    trazilicaStranica.style.display = 'none'
+    pocetnaStranica.style.display = 'block';
+    trazilicaStranica.style.display = 'none';
+    zbirkaStranica.style.display = 'none';
 }
 
 function toggleState(element) {
