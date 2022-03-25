@@ -1,5 +1,5 @@
-Spotify mobile frontend made for the web.
+"Spotify" mobile frontend made for the web.
 
-Functionalities:
--hamburger menu
--tab navigation
+ONLY FOR MOBILE SCREENS!
+
+Interactive elements: hambuger menu, tab navigation.
