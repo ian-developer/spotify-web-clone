@@ -87,15 +87,6 @@ function pageloadState() {
     zbirkaStranica.style.display = 'none';
 }
 
-function toggleState(element) {
-    if(element.style.display === 'block'){
-        element.style.display = 'none'
-    }
-    else{
-        element.style.display = 'block'
-    }
-}
-
 hamburgerButton.addEventListener('click', () => {
 
     if(active){
